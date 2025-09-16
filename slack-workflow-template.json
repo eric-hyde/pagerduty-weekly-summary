@@ -1,0 +1,258 @@
+{
+    "workflow": {
+        "id": "Wf09FQHF2G0Z",
+        "title": "Monday Pagerduty summary",
+        "description": "A brand new workflow",
+        "icon": "",
+        "input_parameters": {
+            "Ft09FF6GTKTN__b4b475ea403b1c13ca4ff3f678d639e9": {
+                "type": "string",
+                "name": "Ft09FF6GTKTN__b4b475ea403b1c13ca4ff3f678d639e9",
+                "description": "b4b475ea403b1c13ca4ff3f678d639e9",
+                "title": "ai_summary",
+                "is_hidden": false
+            },
+            "Ft09FF6GTKTN__192a2935a323f8f980d7a3249a65c674": {
+                "type": "string",
+                "name": "Ft09FF6GTKTN__192a2935a323f8f980d7a3249a65c674",
+                "description": "192a2935a323f8f980d7a3249a65c674",
+                "title": "period_label",
+                "is_hidden": false
+            }
+        },
+        "steps": [
+            {
+                "id": "44ae73de-e21b-43ad-ac74-ea7c333301c4",
+                "function_id": "Fn010M",
+                "inputs": {
+                    "message": {
+                        "hidden": false,
+                        "locked": false,
+                        "value": [
+                            {
+                                "type": "rich_text",
+                                "elements": [
+                                    {
+                                        "type": "rich_text_section",
+                                        "elements": [
+                                            {
+                                                "id": "{{inputs.Ft09FF6GTKTN__192a2935a323f8f980d7a3249a65c674}}",
+                                                "type": "workflowtoken",
+                                                "style": {
+                                                    "bold": true
+                                                },
+                                                "property": "",
+                                                "data_type": "string"
+                                            },
+                                            {
+                                                "text": "\n\n",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "id": "{{inputs.Ft09FF6GTKTN__b4b475ea403b1c13ca4ff3f678d639e9}}",
+                                                "type": "workflowtoken",
+                                                "property": "",
+                                                "data_type": "string"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "user_id": {
+                        "hidden": false,
+                        "locked": false,
+                        "value": ""
+                    },
+                    "interactive_blocks": {
+                        "hidden": false,
+                        "locked": false,
+                        "value": [
+                            {
+                                "type": "actions",
+                                "elements": [
+                                    {
+                                        "text": {
+                                            "text": "Continue",
+                                            "type": "plain_text",
+                                            "emoji": true
+                                        },
+                                        "type": "button",
+                                        "style": "primary",
+                                        "value": "button",
+                                        "action_id": "68c19b52-23d8-4d7a-8af9-6e6a216df81f"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "interactivity_configuration": {
+                        "hidden": false,
+                        "locked": false,
+                        "value": {
+                            "actions": {
+                                "68c19b52-23d8-4d7a-8af9-6e6a216df81f": {
+                                    "is_button_multi_click": false,
+                                    "is_mutually_exclusive": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "id": "456ecbb7-8fd3-4ab5-9dc1-7f6066d63b3c",
+                "function_id": "Fn0102",
+                "inputs": {
+                    "message": {
+                        "hidden": false,
+                        "locked": false,
+                        "value": [
+                            {
+                                "type": "rich_text",
+                                "elements": [
+                                    {
+                                        "type": "rich_text_section",
+                                        "elements": [
+                                            {
+                                                "id": "{{inputs.Ft09FF6GTKTN__192a2935a323f8f980d7a3249a65c674}}",
+                                                "type": "workflowtoken",
+                                                "style": {
+                                                    "bold": true
+                                                },
+                                                "property": "",
+                                                "data_type": "string"
+                                            },
+                                            {
+                                                "text": "\n\n",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "id": "{{inputs.Ft09FF6GTKTN__b4b475ea403b1c13ca4ff3f678d639e9}}",
+                                                "type": "workflowtoken",
+                                                "property": "",
+                                                "data_type": "string"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "channel_id": {
+                        "hidden": false,
+                        "locked": false,
+                        "value": ""
+                    }
+                }
+            }
+        ]
+    },
+    "triggers": [
+        {
+            "name": "Monday Pagerduty summary",
+            "type": "webhook",
+            "inputs": {
+                "Ft09FF6GTKTN__192a2935a323f8f980d7a3249a65c674": {
+                    "value": "{{data.192a2935a323f8f980d7a3249a65c674}}",
+                    "locked": false,
+                    "hidden": false
+                },
+                "Ft09FF6GTKTN__b4b475ea403b1c13ca4ff3f678d639e9": {
+                    "value": "{{data.b4b475ea403b1c13ca4ff3f678d639e9}}",
+                    "locked": false,
+                    "hidden": false
+                }
+            },
+            "webhook": {
+                "schema": {
+                    "period_label": {
+                        "type": "string",
+                        "title": "period_label",
+                        "name": "192a2935a323f8f980d7a3249a65c674",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "current_incidents": {
+                        "type": "string",
+                        "title": "current_incidents",
+                        "name": "1acca8578c94fbcf49e2545bd27f1fa5",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "interruptions_trend": {
+                        "type": "string",
+                        "title": "interruptions_trend",
+                        "name": "288765996ee23a01326e439739e81be5",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "sleep_interruptions_trend": {
+                        "type": "string",
+                        "title": "sleep_interruptions_trend",
+                        "name": "2b9a8bf6e4f05483d1f7f28a12d11c6a",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "message_blocks": {
+                        "type": "string",
+                        "title": "message_blocks",
+                        "name": "57ba49ba2420943c28498395ad17d5ee",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "previous_interruptions": {
+                        "type": "string",
+                        "title": "previous_interruptions",
+                        "name": "820d25227aa96372c5906e5beedc86ed",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "previous_sleep_interruptions": {
+                        "type": "string",
+                        "title": "previous_sleep_interruptions",
+                        "name": "8e6bd61065fe1e53f65e03c682650fdf",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "ai_summary": {
+                        "type": "string",
+                        "title": "ai_summary",
+                        "name": "b4b475ea403b1c13ca4ff3f678d639e9",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "message_text": {
+                        "type": "string",
+                        "title": "message_text",
+                        "name": "d659e067805605ecbf800d8e45c1f581",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "current_interruptions": {
+                        "type": "string",
+                        "title": "current_interruptions",
+                        "name": "db6998c0b7663b00fa5f7eea85d6a219",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "incident_trend": {
+                        "type": "string",
+                        "title": "incident_trend",
+                        "name": "ddfb4a2b54fdf537ef5c1eec418330e8",
+                        "is_hidden": false,
+                        "is_required": false
+                    },
+                    "current_sleep_interruptions": {
+                        "type": "string",
+                        "title": "current_sleep_interruptions",
+                        "name": "e61f40a176c9e371bd6b62745491eb26",
+                        "is_hidden": false,
+                        "is_required": false
+                    }
+                }
+            }
+        }
+    ]
+}

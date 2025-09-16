@@ -1,0 +1,31 @@
+{
+  "name": "pd-weekly-report",
+  "version": "1.0.0",
+  "description": "Automated PagerDuty weekly reports with AI summaries and Slack workflow integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js --debug",
+    "last-week": "node index.js --last-week",
+    "setup": "./setup.sh",
+    "help": "node index.js --help",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pagerduty",
+    "slack",
+    "reporting",
+    "automation",
+    "devops",
+    "monitoring",
+    "analytics"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.2",
+    "tz-offset": "^0.0.2"
+  }
+}
