@@ -51,7 +51,7 @@ After importing, you need to update where the messages are sent:
 After configuring the recipients:
 
 1. **Publish the workflow** by clicking "Publish"
-2. **Copy the webhook URL** from the workflow trigger
+2. **Copy the webhook URL** from the workflow's trigger section by clicking it and going to end of the section to get webhook URL.
 3. **Add the URL to your `.env` file**:
    ```bash
    SLACK_WORKFLOW_WEBHOOK_URL=https://hooks.slack.com/triggers/YOUR_WORKSPACE/YOUR_TRIGGER_ID/YOUR_TOKEN
