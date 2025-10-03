@@ -1,10 +1,13 @@
 # PagerDuty Weekly Report
 
-Automated weekly PagerDuty analytics reports sent to Slack workflows, with AI-powered summ5. **Copy the generated token** and add it to your `.env` file:
+Automated weekly PagerDuty analytics reports sent to Slack workflows, with AI-powered summaries.
+
+Prerequisites:
+
+**Get the pager duty API token by following instruction [here](https://support.pagerduty.com/main/docs/api-access-keys). Copy the generated token** and add it to your `.env` file:
    ```bash
    PD_API_TOKEN=your_token_here
    ```
-
 > **Note:** The API token only needs **read** permissions. The script does not modify any PagerDuty data.s and on-call user tracking.
 
 ## Features
@@ -21,9 +24,11 @@ Automated weekly PagerDuty analytics reports sent to Slack workflows, with AI-po
 
 ### Automated Setup (Recommended)
 
-1. **Run the setup script**
+1. Checkout the repository locally
+
+2. **Run the setup script**
    ```bash
-   ./setup.sh
+   ./scripts/setup.sh
    ```
    
    This will:
@@ -33,13 +38,13 @@ Automated weekly PagerDuty analytics reports sent to Slack workflows, with AI-po
    - Set up environment configuration
    - Test the installation
 
-2. **Edit your configuration**
+3. **Edit your configuration**
    ```bash
    # Edit .env with your actual credentials
    nano .env
    ```
 
-3. **Run reports**
+4. **Run reports**
    ```bash
    # Test with debug mode
    npm run dev
@@ -144,7 +149,7 @@ cp .env.example .env
 #### Option A: Use the Included Template (Recommended)
 
 1. **Import the pre-configured workflow**:
-   - Open Slack Workflow Builder in your browser
+   - Open Slack Workflow Builder in your browser (only browser/desktop, not mobile supported)
    - Click "Create" → "Import"  
    - Select `slack-workflow-template.json` from this repository
    - Configure the message recipients (channels/users)
